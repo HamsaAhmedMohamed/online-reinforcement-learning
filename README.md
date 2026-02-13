@@ -48,17 +48,16 @@ advanced ML theory into impactful real‑world systems.
 
 ## Repository Structure
 
-    notes/          → Course notes and summaries  
     assignments/    → Coursework and solutions  
-    experiments/    → RL implementations and tests  
-    utils/          → Helper code and shared components  
+    Pensum/    → the curriculum and teaching materials,
+    Week # slides/          → slides from lecture
 
 ------------------------------------------------------------------------
 
 ## Contact
 
--   GitHub: https://github.com/\
--   LinkedIn: https://www.linkedin.com/
+-   GitHub: [https://github.com/HamsaAhmedMohamed/]
+-   LinkedIn: [https://www.linkedin.com/in/HamsAhmedMohamed/]
 
 ------------------------------------------------------------------------
 
