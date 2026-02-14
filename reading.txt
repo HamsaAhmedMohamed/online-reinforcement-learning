@@ -1,3 +1,0 @@
-Chapters 3.1-3.3 and 4.2-4.3 and 
-Exercises 3.2, 3.3, 4.1-4.4 in my book, 
-"Machine Learning. The science of selection under uncertainty."
