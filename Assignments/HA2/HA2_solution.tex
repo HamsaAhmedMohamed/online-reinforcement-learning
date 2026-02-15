@@ -1,0 +1,248 @@
+\documentclass[11pt,a4paper]{article}
+% -------------------- Ignore Files--------------------
+\usepackage[draft]{graphicx}
+% -------------------- Packages --------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Optional but handy for nice boxes
+\usepackage[most]{tcolorbox}
+\tcbset{colback=black!2, colframe=black!45, arc=2pt, boxrule=0.6pt}
+
+% -------------------- Metadata --------------------
+\newcommand{\coursename}{Online and Reinforcement Learning}
+\newcommand{\coursecode}{2025--2026}
+\newcommand{\assignment}{Home Assignment 2}
+\newcommand{\deadline}{18 February 2026, 20:59}
+
+% Fill these in
+\newcommand{\studentname}{Hamsa Mohamed} % <-- edit
+\newcommand{\kuid}{XXXXXXXX}            % <-- edit if you want
+\newcommand{\email}{your@email.com}     % <-- edit if you want
+
+% -------------------- Theorem environments --------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% -------------------- Handy commands --------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\normone}[1]{\left\lVert #1 \right\rVert_1}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+
+% True/False formatting for Q1
+\newcommand{\TF}[2]{%
+\noindent\textbf{(#1)} #2\\
+\textbf{Answer:} \fbox{\phantom{True}} True \quad \fbox{\phantom{False}} False\\
+\textbf{Justification:} \\
+\vspace{1.2cm}
+}
+
+% Nice result box
+\newtcolorbox{resultbox}[1][]{title=Result,#1}
+
+% -------------------- Title --------------------
+\title{\vspace{-1.2cm}\coursename\ (\coursecode)\\\assignment}
+\author{\studentname \ \ (\kuid)\\\email}
+\date{Deadline: \deadline}
+
+\begin{document}
+\maketitle
+\vspace{-0.3cm}
+
+\begin{tcolorbox}[title=Submission checklist]
+\begin{itemize}[leftmargin=*]
+  \item PDF report with detailed answers (no full code dumps).
+  \item Separate \texttt{.zip} with well-commented source code and a main file per question (or one main).
+\end{itemize}
+\end{tcolorbox}
+
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Short Questions (8 points)}
+% From HA2 Q1: 4 True/False statements with brief justification :contentReference[oaicite:1]{index=1}
+
+\TF{1}{In a finite discounted MDP, every possible policy induces a Markov Reward Process.}
+
+\TF{2}{Consider a finite discounted MDP, and assume that $\pi$ is an optimal policy. Then, the action(s) output by $\pi$ does not depend on history other than the current state (i.e., $\pi$ is necessarily stationary).}
+
+\TF{3}{In a finite discounted MDP, a greedy policy with respect to optimal action-value function $Q^\star$ corresponds to an optimal policy.}
+
+\TF{4}{Policy Iteration (PI) may return a near-optimal policy.}
+
+% ============================================================
+\section{Introduction of New Products (25 points)}
+% Solve Exercise 7.6 in (Seldin, 2025) :contentReference[oaicite:2]{index=2}
+
+\subsection{Problem statement}
+Briefly restate Exercise 7.6 in your own words (1--3 lines), then proceed.
+
+\subsection{Solution}
+% Your derivations / proofs here.
+
+\begin{resultbox}
+\textbf{Final answer (clean statement):} \\
+Write the final bound / algorithm / conclusion clearly here.
+\end{resultbox}
+
+% ============================================================
+\section{Empirical Comparison of FTL and Hedge (25 points)}
+% Solve Exercise 7.9 in (Seldin, 2025) :contentReference[oaicite:3]{index=3}
+
+\subsection{Experimental setup}
+\begin{itemize}[leftmargin=*]
+  \item Dataset / synthetic setting:
+  \item Losses / feedback model:
+  \item Horizon $T$, number of experts $N$:
+  \item Learning rate / tuning:
+  \item Random seeds / repetitions:
+\end{itemize}
+
+\subsection{Methods}
+\paragraph{FTL.} Describe the update briefly.
+
+\paragraph{Hedge.} Describe the update briefly (weights, learning rate, normalization).
+
+\subsection{Results}
+% Put plots in /figures and include here.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.85\linewidth]{figures/ftl_vs_hedge_regret.png}
+  \caption{Example: Regret curves for FTL vs Hedge (fill in).}
+  \label{fig:ftlhedge}
+\end{figure}
+
+\subsection{Discussion}
+Explain what you observe and why (a few paragraphs).
+
+% ============================================================
+\section{Value Function Bounds (22 points)}
+% Two MDPs M1 and M2, reward diff <= alpha, transition L1 diff <= beta, prove bound on Q^pi difference :contentReference[oaicite:4]{index=4}
+
+\subsection{(i) Proof of the inequality}
+\paragraph{Given.}
+Let $M_1=(\mathcal{S},\mathcal{A},P_1,R_1,\gamma)$ and $M_2=(\mathcal{S},\mathcal{A},P_2,R_2,\gamma)$ be finite discounted MDPs,
+with rewards in $[0,1]$ and for all $(s,a)$:
+\[
+\abs{R_1(s,a)-R_2(s,a)} \le \alpha,
+\qquad
+\normone{P_1(\cdot\mid s,a)-P_2(\cdot\mid s,a)} \le \beta.
+\]
+Goal: show that for any stationary deterministic policy $\pi$ and any $(s,a)$,
+\[
+\abs{Q_1^\pi(s,a)-Q_2^\pi(s,a)} \le \frac{\alpha}{1-\gamma}+\frac{\gamma\beta}{(1-\gamma)^2}.
+\]
+
+\paragraph{Proof.}
+% Follow the hint: derive inequality with max_{s',a'} term and take maximum over (s,a).
+% Write your steps here.
+
+\subsection{(ii) Interpretation}
+Explain in words: how value differences scale with reward mismatch and transition mismatch,
+and why the factor blows up as $\gamma \to 1$.
+
+% ============================================================
+\section{Solving a Discounted Grid-World (20 points)}
+% 4-room GridWorld, slippery transitions, gamma=0.97, then VI, then gamma=0.998 discussion :contentReference[oaicite:5]{index=5}
+
+\subsection{Environment summary}
+\begin{itemize}[leftmargin=*]
+  \item Grid size: $7\times 7$, accessible states: $20$ (after walls).
+  \item Start: upper-left (red). Reward state: lower-right (yellow), absorbing with reward 1 forever.
+  \item Actions: up/left/down/right. Slippery: intended 0.7, stay 0.1, perpendiculars 0.1 each.
+  \item Discount: $\gamma=0.97$ (then $\gamma=0.998$ for part (iii)).
+\end{itemize}
+
+\subsection{(i) Policy Iteration (PI)}
+\paragraph{Implementation notes.}
+State what code you used (file name), and any parameters.
+
+\paragraph{Optimal policy and $V^\star$.}
+Include:
+\begin{itemize}[leftmargin=*]
+  \item A visualization of the policy (arrows in a matrix).
+  \item A visualization/table of $V^\star$.
+\end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/pi_policy_arrows.png}
+  \caption{Optimal policy from PI (arrows).}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/pi_value_heatmap.png}
+  \caption{Optimal value function $V^\star$ from PI.}
+\end{figure}
+
+\subsection{(ii) Value Iteration (VI) with $\varepsilon=10^{-6}$}
+\paragraph{Algorithm.}
+\begin{algorithm}[H]
+\caption{Value Iteration (VI)}
+\begin{algorithmic}[1]
+\State \textbf{Input:} MDP $M=(\mathcal{S},\mathcal{A},P,R,\gamma)$, accuracy $\varepsilon$
+\State Initialize $V_0(s)\leftarrow 0$ for all $s$
+\Repeat
+  \For{each state $s$}
+    \State $V_{\text{new}}(s)\leftarrow \max_{a\in\mathcal{A}} \left( R(s,a) + \gamma \sum_{s'} P(s'\mid s,a)\, V(s') \right)$
+  \EndFor
+  \State $\Delta \leftarrow \max_s |V_{\text{new}}(s)-V(s)|$
+  \State $V \leftarrow V_{\text{new}}$
+\Until{$\Delta < \varepsilon$}
+\State Extract policy $\pi(s)\in \arg\max_a \left( R(s,a) + \gamma \sum_{s'} P(s'\mid s,a)\, V(s') \right)$
+\State \textbf{Output:} $\pi, V$
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Results.}
+Show the VI policy and value function (like in part (i)) and confirm it matches PI.
+
+\subsection{(iii) VI with $\gamma=0.998$ and convergence discussion}
+Report:
+\begin{itemize}[leftmargin=*]
+  \item Number of iterations to converge (or runtime) for $\gamma=0.97$ vs $\gamma=0.998$.
+  \item A short explanation of why higher $\gamma$ slows convergence (contraction factor).
+\end{itemize}
+
+% ============================================================
+\section*{Optional: Improved Parametrization of UCB1 (0 points)}
+% Exercise 7.5 Part 1 (Optional, highly recommended) :contentReference[oaicite:6]{index=6}
+If you solved it, place it here. Otherwise omit this section in your final PDF.
+
+% ============================================================
+\appendix
+\section{Reproducibility notes (optional)}
+\begin{itemize}[leftmargin=*]
+  \item How to run: \texttt{python main\_q3.py} / \texttt{python main\_q5.py}
+  \item Dependencies: \texttt{requirements.txt}
+  \item Random seeds used:
+\end{itemize}
+
+\end{document}

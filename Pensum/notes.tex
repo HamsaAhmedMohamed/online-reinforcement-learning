@@ -1,0 +1,257 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{physics}        % optional, remove if you dislike it
+\usepackage{bbm}            % indicator 1{..}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins,theorems}
+
+% ---------- Hyperref ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  pdftitle={Online \& Reinforcement Learning Notes},
+}
+
+% ---------- Theorem styles ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---------- Course macros (edit these) ----------
+\newcommand{\coursename}{Online and Reinforcement Learning}
+\newcommand{\term}{2025--2026}
+\newcommand{\authorname}{Hamsa Mohamed}
+
+% ---------- Common RL/OL notation ----------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\piPolicy}{\pi}
+\newcommand{\V}{V}
+\newcommand{\Q}{Q}
+\newcommand{\Reg}{\mathrm{Reg}}
+\newcommand{\KL}{\mathrm{KL}}
+
+% ---------- Nice note boxes ----------
+\newtcolorbox{keyidea}{
+  breakable,
+  colback=blue!4,
+  colframe=blue!50!black,
+  title=Key idea,
+  fonttitle=\bfseries
+}
+
+\newtcolorbox{pitfall}{
+  breakable,
+  colback=red!4,
+  colframe=red!55!black,
+  title=Pitfall / common mistake,
+  fonttitle=\bfseries
+}
+
+\newtcolorbox{todoBox}{
+  breakable,
+  colback=yellow!8,
+  colframe=yellow!55!black,
+  title=TODO,
+  fonttitle=\bfseries
+}
+
+\newtcolorbox{proofsketch}{
+  breakable,
+  colback=green!5,
+  colframe=green!40!black,
+  title=Proof sketch,
+  fonttitle=\bfseries
+}
+
+% ---------- Lecture header ----------
+\newcommand{\lecture}[3]{%
+  \section{Lecture #1: #2}
+  \noindent\textbf{Date:} #3 \\
+  \textbf{Reading:} \underline{\hspace{0.8\linewidth}} \\
+  \textbf{Keywords:} \underline{\hspace{0.78\linewidth}} \\
+  \medskip
+}
+
+% ---------- Experiment template ----------
+\newcommand{\experiment}[2]{%
+  \subsection*{Experiment: #1}
+  \noindent\textbf{Goal:} #2 \\
+  \textbf{Setup:} \\
+  \textbf{Metrics:} \\
+  \textbf{Results:} \\
+  \textbf{Takeaways:} \\
+}
+
+% ---------- Title ----------
+\title{\coursename\ --- Notes}
+\author{\authorname}
+\date{\term}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+%                HOW TO USE THIS TEMPLATE
+% ============================================================
+\section*{How to use}
+\begin{itemize}[leftmargin=*]
+  \item Make one \texttt{\textbackslash lecture\{nr\}\{topic\}\{date\}} per lecture.
+  \item Use \texttt{Definition/Theorem/Lemma} environments for clean structure.
+  \item Put intuition in \texttt{keyidea} boxes; warnings in \texttt{pitfall}.
+  \item For algorithms, use the \texttt{algorithm} environment.
+  \item Track open questions in \texttt{todoBox}.
+\end{itemize}
+\newpage
+
+% ============================================================
+%                   LECTURE TEMPLATE
+% ============================================================
+\lecture{1}{Bandits \& Online Learning Basics}{YYYY-MM-DD}
+
+\subsection{Big picture}
+\begin{keyidea}
+Online learning = sequential decisions + feedback. Goal often expressed via regret:
+\[
+\Reg_T = \sum_{t=1}^T \ell_t(w_t) - \min_{w \in \mathcal{W}} \sum_{t=1}^T \ell_t(w).
+\]
+\end{keyidea}
+
+\subsection{Definitions}
+\begin{definition}[Regret]
+Define the (pseudo-)regret against a comparator class $\mathcal{W}$ as
+\[
+\Reg_T = \sum_{t=1}^T \ell_t(w_t) - \min_{w \in \mathcal{W}} \sum_{t=1}^T \ell_t(w).
+\]
+\end{definition}
+
+\subsection{Key results}
+\begin{theorem}[Example theorem statement]
+Assume \underline{\hspace{0.7\linewidth}}. Then
+\[
+\Reg_T \le \underline{\hspace{0.6\linewidth}}.
+\]
+\end{theorem}
+
+\begin{proofsketch}
+Main steps:
+\begin{enumerate}[leftmargin=*]
+  \item Identify potential / Lyapunov function (e.g., log-sum-exp).
+  \item Telescoping sum.
+  \item Bound per-round change using convexity / smoothness.
+\end{enumerate}
+\end{proofsketch}
+
+\subsection{Algorithm}
+\begin{algorithm}[H]
+\caption{Template Algorithm (fill in)}
+\begin{algorithmic}[1]
+\State Initialize parameters
+\For{$t=1,2,\dots,T$}
+  \State Choose action / decision $a_t$ or parameter $w_t$
+  \State Observe feedback (loss/reward) and update
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Questions}
+\begin{todoBox}
+\begin{itemize}[leftmargin=*]
+  \item Prove lemma X from the lecture notes.
+  \item What changes in adversarial vs stochastic setting?
+  \item Connection to RL: bandits are MDPs with one state.
+\end{itemize}
+\end{todoBox}
+
+% ============================================================
+%                  RL-SPECIFIC SECTION
+% ============================================================
+\lecture{2}{MDPs, Value Functions, Bellman Equations}{YYYY-MM-DD}
+
+\subsection{MDP setup}
+\begin{definition}[MDP]
+An MDP is $(\cS,\cA,P,r,\gamma)$ where
+$P(\cdot \mid s,a)$ is the transition kernel and $r(s,a)$ the reward.
+\end{definition}
+
+\begin{keyidea}
+Value functions:
+\[
+\V^{\piPolicy}(s) = \E\!\left[\sum_{t=0}^{\infty} \gamma^t r(s_t,a_t)\mid s_0=s, \piPolicy\right],
+\quad
+\Q^{\piPolicy}(s,a) = \E\!\left[\sum_{t=0}^{\infty} \gamma^t r(s_t,a_t)\mid s_0=s,a_0=a, \piPolicy\right].
+\]
+\end{keyidea}
+
+\subsection{Bellman equations}
+\begin{theorem}[Bellman expectation equation]
+For any policy $\piPolicy$,
+\[
+\V^{\piPolicy}(s) = \sum_{a\in\cA} \piPolicy(a\mid s)\Bigl(r(s,a) + \gamma \E_{s'\sim P(\cdot\mid s,a)}[\V^{\piPolicy}(s')]\Bigr).
+\]
+\end{theorem}
+
+\begin{pitfall}
+It’s easy to mix up \emph{expectation} vs \emph{optimality} Bellman equations.
+Write which one you use every time.
+\end{pitfall}
+
+% ============================================================
+%                 APPENDIX: CHEAT SHEETS
+% ============================================================
+\appendix
+\section{Cheat sheet: common inequalities}
+\begin{itemize}[leftmargin=*]
+  \item Hoeffding: \underline{\hspace{0.85\linewidth}}
+  \item Azuma: \underline{\hspace{0.85\linewidth}}
+  \item Pinsker: $\mathrm{TV}(P,Q) \le \sqrt{\frac{1}{2}\KL(P\|Q)}$
+\end{itemize}
+
+\section{Cheat sheet: notation}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$\Reg_T$ & regret up to time $T$ \\
+$\piPolicy$ & policy \\
+$\V, \Q$ & value / action-value function \\
+$\gamma$ & discount factor \\
+\bottomrule
+\end{tabular}
+
+\end{document}
