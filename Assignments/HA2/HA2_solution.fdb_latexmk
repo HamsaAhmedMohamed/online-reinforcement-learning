@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771082347.03824 "c:/Users/hamsa/Documents/OReL/Assignments/HA2/HA2_solution.tex" "HA2_solution.pdf" "HA2_solution" 1771082348.40886 0
-  "C:/Users/hamsa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771082142 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1771150058.77382 "c:/Users/hamsa/Documents/OReL/Assignments/HA2/HA2_solution.tex" "HA2_solution.pdf" "HA2_solution" 1771150060.13632 0
+  "C:/Users/hamsa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771149386 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/hamsa/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1771078922 13333487 8f4e48ae35a8284a743da861cb9e7483 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -44,6 +44,7 @@
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr6.tfm" 1256929440 11836 e3b6ce3e601aec94f64a536e7f4224d5 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr8.tfm" 1256929440 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ts1-lmr10.tfm" 1256929440 1556 b86d923e6b2f9aab2e313098a95cb0b8 ""
+  "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb" 1256929440 121021 836464b5fe0c782d94085eb083550ccc ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb" 1256929440 116908 9a7a12d1e4df280ea0ab4aad83cdef88 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb" 1256929440 23055 2e5b42921de910eaa97b85df04ca4891 ""
@@ -235,11 +236,11 @@
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/hamsa/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "HA2_solution.aux" 1771082348 4141 9ea5a10da7359ad0a8465fef3f51e925 "pdflatex"
-  "HA2_solution.out" 1771082348 3489 9e756558065e7ae10673f89816f37edb "pdflatex"
-  "HA2_solution.tex" 1771082346 9248 de499f71945f3bd420f3e7b11362ca20 ""
-  "HA2_solution.toc" 1771082348 2063 beb4db10cf7559fcfcd7a3a424cc4827 "pdflatex"
-  "c:/Users/hamsa/Documents/OReL/Assignments/HA2/HA2_solution.tex" 1771082346 9248 de499f71945f3bd420f3e7b11362ca20 ""
+  "HA2_solution.aux" 1771150059 4141 5be1748ebcb5920d50493e11de90d2c5 "pdflatex"
+  "HA2_solution.out" 1771150059 3489 9e756558065e7ae10673f89816f37edb "pdflatex"
+  "HA2_solution.tex" 1771150056 9402 c74960bc703c550422612f8f57944b20 ""
+  "HA2_solution.toc" 1771150059 2063 dde60c50d64fef511fe714ffed6f7545 "pdflatex"
+  "c:/Users/hamsa/Documents/OReL/Assignments/HA2/HA2_solution.tex" 1771150056 9402 c74960bc703c550422612f8f57944b20 ""
   "figures/ftl_vs_hedge_regret.png" 0 -1 0 ""
   "figures/pi_policy_arrows.png" 0 -1 0 ""
   "figures/pi_value_heatmap.png" 0 -1 0 ""

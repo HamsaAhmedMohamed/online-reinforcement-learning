@@ -55,12 +55,17 @@
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 
 % True/False formatting for Q1
-\newcommand{\TF}[2]{%
+\usepackage{amssymb} % for \checkmark
+\newcommand{\TF}[4]{%
 \noindent\textbf{(#1)} #2\\
-\textbf{Answer:} \fbox{\phantom{True}} True \quad \fbox{\phantom{False}} False\\
-\textbf{Justification:} \\
-\vspace{1.2cm}
+\textbf{Answer: }
+\fbox{\ifx#3T\checkmark\else\phantom{\checkmark}\fi} True
+\quad
+\fbox{\ifx#3F\checkmark\else\phantom{\checkmark}\fi} False\\
+\textbf{Justification:} #4\\
+\vspace{1cm}
 }
+
 
 % Nice result box
 \newtcolorbox{resultbox}[1][]{title=Result,#1}
@@ -88,13 +93,13 @@
 \section{Short Questions (8 points)}
 % From HA2 Q1: 4 True/False statements with brief justification :contentReference[oaicite:1]{index=1}
 
-\TF{1}{In a finite discounted MDP, every possible policy induces a Markov Reward Process.}
+\TF{1}{In a finite discounted MDP, every possible policy induces a Markov Reward Process.}{F}{Missing}
 
-\TF{2}{Consider a finite discounted MDP, and assume that $\pi$ is an optimal policy. Then, the action(s) output by $\pi$ does not depend on history other than the current state (i.e., $\pi$ is necessarily stationary).}
+\TF{2}{Consider a finite discounted MDP, and assume that $\pi$ is an optimal policy. Then, the action(s) output by $\pi$ does not depend on history other than the current state (i.e., $\pi$ is necessarily stationary).}{F}{Missing}
 
-\TF{3}{In a finite discounted MDP, a greedy policy with respect to optimal action-value function $Q^\star$ corresponds to an optimal policy.}
+\TF{3}{In a finite discounted MDP, a greedy policy with respect to optimal action-value function $Q^\star$ corresponds to an optimal policy.}{F}{Missing}
 
-\TF{4}{Policy Iteration (PI) may return a near-optimal policy.}
+\TF{4}{Policy Iteration (PI) may return a near-optimal policy.}{F}{Missing}
 
 % ============================================================
 \section{Introduction of New Products (25 points)}

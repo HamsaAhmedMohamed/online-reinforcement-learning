@@ -1,0 +1,21 @@
+ infinite-horizon discounted
+
+we assume finite Discounted MDP
+- and stationary
+- deterministic reward func
+- uniformlybounded,
+- policy
+
+ a generic norm
+Markov Property
+- Memoryless property of a stochastic process
+
+
+An MDP is called finite if both its state-space and action-space are finite
+
+infinite-horizon discounted Markov Decision Processes 
+
+or discounted MDPs
+
+ MDPs adhere to the Markov property
+
