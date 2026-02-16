@@ -1,0 +1,8 @@
+Online Learning problems are characterized
+
+- feedback
+ 	- full info
+	- limited info
+- env
+- struc complexity
+
