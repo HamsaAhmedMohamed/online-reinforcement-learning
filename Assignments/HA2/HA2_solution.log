@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.14)  15 FEB 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.14)  17 FEB 2026 12:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -922,51 +922,52 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {C:/Users/hamsa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [2]
 
-LaTeX Warning: File `figures/ftl_vs_hedge_regret.png' not found on input line 141.
+LaTeX Warning: File `figures/ftl_vs_hedge_regret.png' not found on input line 150.
 
 [3]
 
-LaTeX Warning: File `figures/pi_policy_arrows.png' not found on input line 200.
+LaTeX Warning: File `figures/pi_policy_arrows.png' not found on input line 209.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `figures/pi_value_heatmap.png' not found on input line 206.
+LaTeX Warning: File `figures/pi_value_heatmap.png' not found on input line 215.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
+(hyperref)                removing `math shift' on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varepsilon' on input line 210.
+(hyperref)                removing `\varepsilon' on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 210.
+(hyperref)                removing `superscript' on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
+(hyperref)                removing `math shift' on input line 219.
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 213.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 232.
-
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 222.
+[4{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gamma' on input line 232.
+(hyperref)                removing `math shift' on input line 241.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 232.
+(hyperref)                removing `\gamma' on input line 241.
 
-[4{C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [5] [6] (HA2_solution.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 241.
+
+[5] [6] (HA2_solution.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -975,15 +976,15 @@ Package rerunfilecheck Info: File `HA2_solution.out' has not changed.
 (rerunfilecheck)             Checksum: 9E756558065E7AE10673F89816F37EDB;3489.
  ) 
 Here is how much of TeX's memory you used:
- 34665 strings out of 467871
- 697926 string characters out of 5418376
+ 34671 strings out of 467871
+ 697994 string characters out of 5418376
  1137833 words of memory out of 5000000
  62874 multiletter control sequences out of 15000+600000
- 693789 words of font info for 129 fonts, out of 8000000 for 9000
+ 694049 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,7n,118p,1055b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,7n,118p,1055b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/hamsa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on HA2_solution.pdf (6 pages, 318473 bytes).
+Output written on HA2_solution.pdf (6 pages, 320118 bytes).
 PDF statistics:
  282 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)

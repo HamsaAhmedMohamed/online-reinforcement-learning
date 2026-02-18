@@ -9,9 +9,9 @@
 \contentsline {paragraph}{Hedge.}{3}{section*.3}%
 \contentsline {subsection}{\numberline {3.3}Results}{3}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Discussion}{3}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Value Function Bounds (22 points)}{3}{section.4}%
-\contentsline {subsection}{\numberline {4.1}(i) Proof of the inequality}{3}{subsection.4.1}%
-\contentsline {paragraph}{Given.}{3}{section*.5}%
+\contentsline {section}{\numberline {4}Value Function Bounds (22 points)}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}(i) Proof of the inequality}{4}{subsection.4.1}%
+\contentsline {paragraph}{Given.}{4}{section*.5}%
 \contentsline {paragraph}{Proof.}{4}{section*.6}%
 \contentsline {subsection}{\numberline {4.2}(ii) Interpretation}{4}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Solving a Discounted Grid-World (20 points)}{4}{section.5}%
@@ -20,7 +20,7 @@
 \contentsline {paragraph}{Implementation notes.}{4}{section*.7}%
 \contentsline {paragraph}{Optimal policy and $V^\star $.}{4}{section*.8}%
 \contentsline {subsection}{\numberline {5.3}(ii) Value Iteration (VI) with $\varepsilon =10^{-6}$}{4}{subsection.5.3}%
-\contentsline {paragraph}{Algorithm.}{4}{algorithm.1}%
-\contentsline {paragraph}{Results.}{4}{section*.12}%
+\contentsline {paragraph}{Algorithm.}{5}{algorithm.1}%
+\contentsline {paragraph}{Results.}{5}{section*.12}%
 \contentsline {subsection}{\numberline {5.4}(iii) VI with $\gamma =0.998$ and convergence discussion}{5}{subsection.5.4}%
 \contentsline {section}{\numberline {A}Reproducibility notes (optional)}{5}{appendix.A}%

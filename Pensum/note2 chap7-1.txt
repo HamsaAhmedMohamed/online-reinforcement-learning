@@ -1,8 +1,10 @@
 Online Learning problems are characterized
 
 - feedback
- 	- full info
-	- limited info
+ 	- full info(stock market)
+	- limited info/bandit (medical treatments)
+		-exploration-exploitation
+		-ACt-obs-analyse
 - env
 - struc complexity
 
